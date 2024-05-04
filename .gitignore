@@ -1,3 +1,10 @@
+# User-specific files - Ignore all files ending in ".suo"
+*.suo
+
+# Mono auto generated files - Ignore all files starting with "mono_crash."
+mono_crash.*
+
+
 # Compiled source #
 ###################
 *.com
@@ -19,6 +26,30 @@
 *.rar
 *.tar
 *.zip
+
+
+# Build results - Ignore all files in these folders found at any folder depth
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+
+
+# Root config folder - Ignore this directory at the root due to leading slash
+# Removing the slash would ignore "config" directories at all depths 
+/config
+
+# Ignore intermediate JS build files produced during TypeScript build at any 
+# folder depth under /Web/TypeScript. This won't ignore JS files elsewhere. 
+/Web/TypeScript/**/*.js
+
+# Changes to files with the js extensions need to be reviewed by the js-owner user/group:
+*.js    @js-owner
+
+# Changes to files in the builds folder need to be reviewed by the octocat user/group:
+/build/ @octocat
+
 
 # Logs and databases #
 ######################
